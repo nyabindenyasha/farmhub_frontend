@@ -103,6 +103,7 @@ export default function CropProgramDetails({programId, onClose}: CropProgramDeta
                                 <TableHead>Pesticide</TableHead>
                                 <TableHead>Stage of Growth</TableHead>
                                 <TableHead>Application Method</TableHead>
+                                <TableHead>Rate</TableHead>
                                 <TableHead>Remarks</TableHead>
                             </TableRow>
                         </TableHeader>
@@ -112,6 +113,7 @@ export default function CropProgramDetails({programId, onClose}: CropProgramDeta
                                     <TableCell>{schedule.pesticide.name}</TableCell>
                                     <TableCell>{`${schedule.stageOfGrowth.periodValue} ${schedule.stageOfGrowth.periodUnit}`}</TableCell>
                                     <TableCell>{schedule.applicationMethod}</TableCell>
+                                    <TableCell>{schedule.pesticide.applicationRate}{schedule.pesticide.applicationRateUnit}{schedule.pesticide.applicationRateRateUnit}</TableCell>
                                     <TableCell>{schedule.remarks}</TableCell>
                                 </TableRow>
                             ))}
@@ -135,7 +137,7 @@ export default function CropProgramDetails({programId, onClose}: CropProgramDeta
                                     <TableCell>{schedule.fertilizer.name}</TableCell>
                                     <TableCell>{`${schedule.stageOfGrowth.periodValue} ${schedule.stageOfGrowth.periodUnit}`}</TableCell>
                                     <TableCell>{schedule.applicationMethod}</TableCell>
-                                    <TableCell>{schedule.rate}</TableCell>
+                                    <TableCell>{schedule.applicationRate}{schedule.applicationRateUnit}</TableCell>
                                     <TableCell>{schedule.remarks}</TableCell>
                                 </TableRow>
                             ))}

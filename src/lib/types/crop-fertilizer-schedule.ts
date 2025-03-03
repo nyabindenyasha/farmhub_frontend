@@ -10,7 +10,8 @@ export interface CropFertilizerSchedule {
     fertilizer: Fertilizer,
     stageOfGrowth: Period,
     applicationInterval: Period,
-    rate: number,
+    applicationRate: number,
+    applicationRateUnit: string,
     applicationMethod: FertilizerApplicationMethod,
     remarks: string
 }
@@ -22,7 +23,7 @@ const toSchedule = (fertilizerSchedule: CropFertilizerSchedule): Schedule => ({
     fertilizer: fertilizerSchedule.fertilizer,
     stageOfGrowth: fertilizerSchedule.stageOfGrowth,
     applicationInterval: fertilizerSchedule.applicationInterval,
-    rate: fertilizerSchedule.rate,
+    rate: fertilizerSchedule.applicationRate,
     applicationMethod: fertilizerSchedule.applicationMethod,
     remarks: fertilizerSchedule.remarks
 });

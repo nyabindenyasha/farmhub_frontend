@@ -56,6 +56,14 @@ export default function PesticideComponent() {
         );
     };
 
+    const applicationRateBodyTemplate = (rowData: Pesticide) => {
+        return (
+            <div className="flex align-items-center gap-2">
+                <span>{rowData.applicationRate} {rowData.applicationRateUnit} {rowData.applicationRateRateUnit}</span>
+            </div>
+        );
+    };
+
     const safetyIntervalBodyTemplate = (rowData: Pesticide) => {
         return (
             <div className="flex align-items-center gap-2">
@@ -194,7 +202,7 @@ export default function PesticideComponent() {
 
                         <Column field="activeIngredients" header="Active Ingredients" body={activeIngredientsTemplate}></Column>
 
-                        <Column field="applicationRate" header="Application Rate"></Column>
+                        <Column field="applicationRate" header="Application Rate" body={applicationRateBodyTemplate}></Column>
 
                         <Column field="safetyInterval" header="Withdrawal Period" body={safetyIntervalBodyTemplate}></Column>
 

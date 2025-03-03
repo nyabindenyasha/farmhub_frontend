@@ -8,7 +8,8 @@ export interface CropFertilizerScheduleTask {
     fertilizer: Fertilizer,
     stageOfGrowth: Period,
     applicationInterval: Period,
-    rate: number,
+    applicationRate: number,
+    applicationRateUnit: string,
     applicationMethod: FertilizerApplicationMethod,
     remarks: string
     isCompleted: boolean,
