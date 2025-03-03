@@ -13,6 +13,8 @@ import {PesticideType} from "@/lib/enums/pesticide-type";
 import {PesticideModeOfAction} from "@/lib/enums/pesticide-mode-of-action";
 import {usePesticideContext} from "@/context/PesticideContext";
 import {Toast} from "primereact/toast";
+import {MeasurementUnit} from "@/lib/enums/measurement-unit";
+import {RateUnit} from "@/lib/enums/rate-unit";
 
 export default function CreateChemical({isOpen, onClose}: FormProps) {
 
@@ -24,6 +26,8 @@ export default function CreateChemical({isOpen, onClose}: FormProps) {
         alias: "",
         activeIngredients: [],
         applicationRate: "",
+        applicationRateUnit: MeasurementUnit.MILLILITRE,
+        applicationRateRateUnit: RateUnit.PER_KNAPSACK,
         safetyInterval: 7,
         pesticideType: PesticideType.PESTICIDE,
         modeOfAction: PesticideModeOfAction.PREVENTATIVE,

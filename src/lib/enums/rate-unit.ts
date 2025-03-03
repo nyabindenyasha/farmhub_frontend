@@ -7,6 +7,7 @@ export enum RateUnit {
     // Area-Based Units (for application rates)
     PER_SQUARE_METER = "Per Square Meter",
     PER_HECTARE = "Per Hectare",
+    PER_KNAPSACK = "Per Knapsack"
 }
 
 // Mapping for additional properties
@@ -18,6 +19,7 @@ const RateUnitDetails: Record<RateUnit, { description: string; symbol: string }>
     [RateUnit.PER_TON]: {description: "per ton", symbol: "t"},
     [RateUnit.PER_SQUARE_METER]: {description: "Per Square Meter", symbol: "m²"},
     [RateUnit.PER_HECTARE]: {description: "Per Hectare", symbol: "ha"},
+    [RateUnit.PER_KNAPSACK]: {description: "Per Knapsack", symbol: "knapsack"}
 };
 
 // Function to retrieve unit details
