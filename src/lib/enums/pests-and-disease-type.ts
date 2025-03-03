@@ -1,0 +1,7 @@
+export enum PestsAndDiseaseType {
+
+    INSECTS = "INSECTS",
+    FUNGAL_DISEASE = "FUNGAL_DISEASE",
+    BACTERIAL_DISEASE = "BACTERIAL_DISEASE",
+
+}
